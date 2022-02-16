@@ -5,8 +5,8 @@ var http = require("http");
 http
     .createServer(function (req, res) {
     var requiredProps = ["b"];
-    // const optionalProps = keys<OptionalOnly<Props>>();
-    res.write(JSON.stringify(requiredProps)); //write a response to the client
+    var optionalProps = ["a"];
+    res.write(JSON.stringify({ requiredProps: requiredProps, optionalProps: optionalProps })); //write a response to the client
     res.end(); //end the response
 })
     .listen(8080); //the server object listens on port 8080
