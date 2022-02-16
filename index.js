@@ -4,7 +4,8 @@ var http = require("http");
 //create a server object:
 http
     .createServer(function (req, res) {
-    var requiredProps = ["a", "b"];
+    var requiredProps = ["b"];
+    // const optionalProps = keys<OptionalOnly<Props>>();
     res.write(JSON.stringify(requiredProps)); //write a response to the client
     res.end(); //end the response
 })

@@ -9,7 +9,7 @@ http
     }
 
     type RequiredOnly<T> = {
-      [P in keyof T]: NonNullable<T[P]>;
+      [K in keyof T as T[K] extends Required<T>[K] ? K : never]: T[K]
     };
 
     const requiredProps = keys<RequiredOnly<Props>>();

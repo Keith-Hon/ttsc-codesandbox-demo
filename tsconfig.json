@@ -8,12 +8,9 @@
       {
         "transform": "ts-transformer-keys/transformer"
       }
-    ]
+    ],
+    "strictNullChecks": true
   },
-  "files": [
-    "index.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "files": ["index.ts"],
+  "exclude": ["node_modules"]
 }
